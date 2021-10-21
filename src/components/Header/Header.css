@@ -1,0 +1,9 @@
+#navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.navLinks {
+  text-decoration: none;
+  list-style: none;
+}
