@@ -1,7 +1,7 @@
 import React from "react";
 // import "./Home.css";
-import DogBanner from "../../assets/dogBanner.svg";
-import Header from "../../components/Header/Header";
+// import DogBanner from "../../assets/dogBanner.svg";
+// import Header from "../../components/Header/Header";
 const Home = () => {
   return (
     <>
