@@ -1,5 +1,10 @@
-#navLinks {
+#nav {
   list-style: none;
   display: flex;
   justify-content: space-around;
+}
+.NavLinks {
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
