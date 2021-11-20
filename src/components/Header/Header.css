@@ -2,12 +2,16 @@
   list-style: none;
   display: flex;
   justify-content: space-around;
-  margin-top: 5rem;
-  margin-bottom: -5rem;
+  /* margin-top: 5rem;
+  margin-bottom: -5rem; */
   margin-left: 50rem;
 }
 .NavLinks {
   list-style: none;
   text-decoration: none;
   color: black;
+}
+.Logo {
+  display: inline-flex;
+  margin-top: 2rem;
 }
