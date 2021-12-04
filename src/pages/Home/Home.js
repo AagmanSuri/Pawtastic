@@ -25,7 +25,7 @@ const Home = () => {
           <h1>while </h1>
           <h1>you’re away</h1>
           <Link to="/Services">
-            <button className="btn">Sechule Visit</button>
+            <button className="btn">Schedule a visit</button>
           </Link>
         </div>
       </section>
@@ -44,6 +44,14 @@ const Home = () => {
               local veterinarians. Trust to us to love them like our own, and to
               keep them safe and happy till you’re home.
             </p>
+            <Link to="/Services">
+              <button
+                style={{ color: "white", backgroundColor: "#545871" }}
+                className="btn"
+              >
+                Schedule a visit
+              </button>
+            </Link>
           </div>
 
           <div>
