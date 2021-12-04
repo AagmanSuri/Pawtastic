@@ -11,6 +11,7 @@ import twoDog from "../../assets/twoDog.svg";
 import personAndPet from "../../assets/personAndPet.svg";
 import Review from "../../components/Reviews/Reviews";
 import ServicePriceCard from "../../components/ServicePriceCard/Price";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
@@ -152,6 +153,9 @@ const Home = () => {
           Schedule a visit
         </button>
       </Link>
+      <br></br>
+      <br></br>
+      <Footer />
     </>
   );
 };
