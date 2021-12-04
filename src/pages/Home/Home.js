@@ -9,8 +9,7 @@ import parrot from "../../assets/parrot.svg";
 import blackCat from "../../assets/blackcat.svg";
 import twoDog from "../../assets/twoDog.svg";
 import personAndPet from "../../assets/personAndPet.svg";
-
-// import Header from "../../components/Header/Header";
+import Review from "../../components/Reviews/Reviews";
 const Home = () => {
   return (
     <>
@@ -116,6 +115,17 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <main>
+        <section className="container">
+          <div className="title">
+            <h1 style={{ fontSize: "40px", color: "white" }}>
+              Pets & their humans love us
+            </h1>
+            <div className="underline"></div>
+          </div>
+          <Review />
+        </section>
+      </main>
     </>
   );
 };
