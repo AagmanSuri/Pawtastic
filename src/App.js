@@ -1,5 +1,5 @@
 import Home from "./pages/Home/Home";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import About from "./pages/About/About";
 import Reviews from "./pages/Reviews/Reviews";
 import Services from "./pages/Services/index";
@@ -11,7 +11,7 @@ function App() {
     <>
       <Router>
         <div className="App">
-          <Header />
+          {/* <Header /> */}
           {/* Switch matches the url and stops  */}
           <Switch>
             {/* exact has been intoduced */}

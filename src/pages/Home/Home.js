@@ -12,9 +12,12 @@ import personAndPet from "../../assets/personAndPet.svg";
 import Review from "../../components/Reviews/Reviews";
 import ServicePriceCard from "../../components/ServicePriceCard/Price";
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+
 const Home = () => {
   return (
     <>
+      <Header />
       <section className="back">
         <img src={DogBanner} alt="Logo"></img>
       </section>
