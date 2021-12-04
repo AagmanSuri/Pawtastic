@@ -44,7 +44,7 @@ const Review = () => {
         </button>
       </div>
       <button className="random-btn" onClick={surpriseHandeler}>
-        SurpriseMe
+        Reviews
       </button>
     </article>
   );

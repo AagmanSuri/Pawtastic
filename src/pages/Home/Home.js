@@ -10,6 +10,7 @@ import blackCat from "../../assets/blackcat.svg";
 import twoDog from "../../assets/twoDog.svg";
 import personAndPet from "../../assets/personAndPet.svg";
 import Review from "../../components/Reviews/Reviews";
+import ServicePriceCard from "../../components/ServicePriceCard/Price";
 const Home = () => {
   return (
     <>
@@ -126,6 +127,31 @@ const Home = () => {
           <Review />
         </section>
       </main>
+      <section>
+        <div>
+          <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
+            Affordable options, tailored to your needs
+          </h1>
+          <p style={{ textAlign: "center", fontSize: "20px" }}>
+            All services include live updates including photos and chat, as well
+            as notifications of sitter arrival and departure times.
+          </p>
+          <ServicePriceCard />
+        </div>{" "}
+      </section>
+      <Link to="/Services">
+        <button
+          style={{
+            color: "white",
+            backgroundColor: "#545871",
+            marginTop: "2rem",
+            marginLeft: "40rem"
+          }}
+          className="btn"
+        >
+          Schedule a visit
+        </button>
+      </Link>
     </>
   );
 };
