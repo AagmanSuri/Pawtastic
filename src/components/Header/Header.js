@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -11,7 +11,9 @@ const Header = () => {
           <img src={Logo} alt="Logo"></img>
         </Link>
         {""}
-        <h4>Pawtastic</h4>
+        <Link className="NavLinks" to="/">
+          <h2>Pawtastic</h2>
+        </Link>
       </div>
       <ul id="nav">
         <Link className="NavLinks" to="/About">
