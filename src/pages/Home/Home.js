@@ -9,7 +9,7 @@ import parrot from "../../assets/parrot.svg";
 import blackCat from "../../assets/blackcat.svg";
 import twoDog from "../../assets/twoDog.svg";
 import personAndPet from "../../assets/personAndPet.svg";
-import Review from "../../components/Reviews/Reviews";
+import Review from "../../components/Reviews";
 import ServicePriceCard from "../../components/ServicePriceCard/Price";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
