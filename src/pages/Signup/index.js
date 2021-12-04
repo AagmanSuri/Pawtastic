@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./signup.css";
 import BackGroundCat from "../../assets/backGroungCat.svg";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo.svg";
 const Signup = () => {
   const [zipCode, setZipCode] = useState(0);
   const [process, setProcess] = useState(false);
@@ -19,6 +20,20 @@ const Signup = () => {
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat} alt="back"></img>
       <div style={{ textAlign: "center", marginTop: "5rem" }}>
+        <div
+          style={{ marginTop: "-2rem", marginLeft: "-15rem" }}
+          className="Logo"
+        >
+          <Link className="NavLinks" to="/">
+            <img style={{ marginLeft: "1rem" }} src={Logo} alt="Logo"></img>
+          </Link>{" "}
+          <Link className="NavLinks" to="/">
+            {"    "}
+            <h2 style={{ marginLeft: "1rem", marginTop: "0.65rem" }}>
+              Pawtastic
+            </h2>
+          </Link>
+        </div>
         <h1>Why our service?</h1>
         <p style={{ fontSize: "20px", marginRight: "2rem" }}>
           <br></br>
