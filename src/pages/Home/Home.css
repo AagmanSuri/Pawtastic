@@ -11,7 +11,13 @@
 .btn {
   border-radius: 2rem;
 
-  padding: 1rem 3rem 1rem 3rem;
+  /* padding: 1rem 2rem 1rem 2rem; */
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .back {
   margin-top: -12rem;

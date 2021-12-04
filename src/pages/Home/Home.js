@@ -8,6 +8,7 @@ import rabbit from "../../assets/rabbit.svg";
 import parrot from "../../assets/parrot.svg";
 import blackCat from "../../assets/blackcat.svg";
 import twoDog from "../../assets/twoDog.svg";
+import personAndPet from "../../assets/personAndPet.svg";
 
 // import Header from "../../components/Header/Header";
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
         <div className="wrapper">
           <div className="block">
             <h2>Expert care for your furry, feathery, or scaley friend</h2>
-            <p>
+            <p style={{ fontSize: "20px" }}>
               We know how stressful it is to leave your pets at home alone.
               We’re a team of experienced animal caregivers, well connected to
               local veterinarians. Trust to us to love them like our own, and to
@@ -76,6 +77,34 @@ const Home = () => {
               alt="dog"
               src={twoDog}
             ></img>
+          </div>
+        </div>
+      </section>
+      <br></br>
+      <br></br>
+      <section>
+        <div style={{ backgroundColor: "#F7ECEB" }} className="wrapper">
+          <div style={{ width: "20%", float: "left" }}>
+            <img src={personAndPet} alt="person"></img>
+          </div>
+
+          <div
+            style={{
+              width: "80%",
+              float: "right",
+              marginTop: "15rem",
+              marginLeft: "5rem"
+            }}
+          >
+            <h2>Services tailored to your needs</h2>{" "}
+            <p style={{ fontSize: "20px" }}>
+              Schedule one-off or recurring home visits. An experienced member
+              of our team will spend time with your pet, feed them, change cat
+              litter trays, take the dog for a walk, and anything else you need.
+            </p>
+            <Link to="/Services">
+              <button className="btn">Schedule a visit</button>
+            </Link>
           </div>
         </div>
       </section>
