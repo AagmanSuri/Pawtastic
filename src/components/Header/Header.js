@@ -8,11 +8,13 @@ const Header = () => {
     <div>
       <div className="Logo">
         <Link className="NavLinks" to="/">
-          <img src={Logo} alt="Logo"></img>
-        </Link>
-        {""}
+          <img style={{ marginLeft: "1rem" }} src={Logo} alt="Logo"></img>
+        </Link>{" "}
         <Link className="NavLinks" to="/">
-          <h2>Pawtastic</h2>
+          {"    "}
+          <h2 style={{ marginLeft: "1rem", marginTop: "0.65rem" }}>
+            Pawtastic
+          </h2>
         </Link>
       </div>
       <ul id="nav">

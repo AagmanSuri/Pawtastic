@@ -22,7 +22,7 @@ const Home = () => {
         <img src={DogBanner} alt="Logo"></img>
       </section>
       <section className="front">
-        <div className="right center">
+        <div className="right center" style={{ color: "white" }}>
           <h1>we care for</h1>
           <h1>your furry little </h1>
           <h1>loved ones </h1>
@@ -57,7 +57,6 @@ const Home = () => {
               </button>
             </Link>
           </div>
-
           <div>
             <img
               style={{ height: "200px", width: "200px" }}
@@ -99,7 +98,6 @@ const Home = () => {
           <div style={{ width: "20%", float: "left" }}>
             <img src={personAndPet} alt="person"></img>
           </div>
-
           <div
             style={{
               width: "80%",
