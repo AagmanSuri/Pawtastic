@@ -5,14 +5,17 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 const Signup = () => {
   const [zipCode, setZipCode] = useState(0);
-  const [process, setProcess] = useState(false);
+  const [process, setProcess] = useState(true);
+  const [status, setStatus] = useState("disabled");
   const checkHandeler = () => {
     console.log(Number(zipCode));
 
     if (Number(zipCode) > 180000 && Number(zipCode) < 190000) {
       setProcess(true);
+      setStatus("");
     } else {
       setProcess(false);
+      setStatus("disabled");
     }
   };
 
@@ -72,11 +75,12 @@ const Signup = () => {
             Check
           </button>
           {"  "}
-          {process && (
-            <Link to="/Signup/register">
-              <button className="btn">Next</button>
-            </Link>
-          )}
+          <Link to="/Signup/register">
+            <button disabled={status} className="btn">
+              Next
+            </button>
+          </Link>
+          {/*   */}
           {!process && (
             <h2>
               Please try some other pincode , Sorry we dont serve at you area{" "}
