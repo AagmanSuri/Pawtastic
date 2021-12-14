@@ -21,6 +21,10 @@ function App() {
             <Route path="/Services" component={Services} />
             <Route exact path="/Signup" component={Signup} />
             <Route path="/Signup/register" component={SignupRegister} />
+            <Route
+              path="/Signup/registerHumanProfile"
+              component={registerHumanProfile}
+            />
           </Switch>
         </div>
       </Router>
