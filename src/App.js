@@ -5,6 +5,7 @@ import Reviews from "./pages/Reviews/Reviews";
 import Services from "./pages/Services/index";
 import Signup from "./pages/Signup/index";
 import SignupRegister from "./pages/Signup/register";
+import registerHumanProfile from "./pages/Signup/registerHumanProfile"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
