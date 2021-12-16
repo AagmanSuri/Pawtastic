@@ -10,10 +10,10 @@ import Logo from "../../assets/Logo.svg";
 
 import { Formik } from "formik";
 
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 
 const Register = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <div className="wrapper wrapper-sign">
