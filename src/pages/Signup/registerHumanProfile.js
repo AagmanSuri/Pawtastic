@@ -2,7 +2,7 @@ import React from "react";
 
 import "./signup.css";
 
-import BackGroundCat from "../../assets/backGroungCat.svg";
+import BackGroundCat from "../../assets/backgroundCat3.svg";
 
 import { Link } from "react-router-dom";
 
@@ -48,14 +48,14 @@ const Register = () => {
       <div
         className="box2"
         style={{
-          backgroundColor: "#F7ECEB",
+          backgroundColor: "#F7ECEB"
         }}
       >
         <div
           style={{
             marginLeft: "2rem",
 
-            marginTop: "16rem",
+            marginTop: "16rem"
           }}
         >
           <h1>
@@ -65,29 +65,27 @@ const Register = () => {
 
           <Formik
             initialValues={{ email: "", password: "" }}
-            validate={(values) => {
-              const errors = {};
+            // validate={(values) => {
+            //   const errors = {};
 
-              if (!values.email) {
-                errors.email = "Required";
-              } else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-              ) {
-                errors.email = "Invalid email address";
-              }
+            //   if (!values.email) {
+            //     errors.email = "Required";
+            //   } else if (
+            //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            //   ) {
+            //     errors.email = "Invalid email address";
+            //   }
 
-              return errors;
-            }}
+            //   return errors;
+            // }}
             onSubmit={(values, { setSubmitting }) => {
-              // setTimeout(() => {
+              setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
 
-              // alert(JSON.stringify(values, null, 2));
+                setSubmitting(false);
+              }, 400);
 
-              // setSubmitting(false);
-
-              // }, 400);
-
-              history.push("./registerHumanProfile");
+              // history.push("./registerHumanProfile");
             }}
           >
             {({
@@ -103,29 +101,72 @@ const Register = () => {
 
               handleSubmit,
 
-              isSubmitting,
+              isSubmitting
 
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit}>
-                <label>Email : </label>
+                <label>First Name : </label>
                 <input
-                  type="email"
-                  name="email"
+                  type="text"
+                  name="FirstName"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.FirstName}
                 />
-                {errors.email && touched.email && errors.email}{" "}
-                <label>Password : </label>
+                {errors.FirstName && touched.FirstName && errors.FirstName}{" "}
+                <label>LastName : </label>
                 <input
-                  type="password"
-                  name="password"
+                  type="text"
+                  name="LastName"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.password}
+                  value={values.LastName}
                 />
-                {errors.password && touched.password && errors.password}{" "}
+                {errors.LastName && touched.LastName && errors.LastName}{" "}
+                <br></br>
+                <br></br>
+                <label>Phone : </label>
+                <input
+                  type="phone"
+                  name="Phone"
+                  required
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.Phone}
+                />
+                {errors.Phone && touched.Phone && errors.Phone}
+                {"                        "}
+                <label>PhoneAlt : </label>
+                <input
+                  type="phone"
+                  name="PhoneAlt"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.PhoneAlt}
+                />
+                {errors.PhoneAlt && touched.PhoneAlt && errors.PhoneAlt}{" "}
+                <br></br>
+                <br></br>
+                <label>City : </label>
+                <input
+                  type="text"
+                  name="City"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.City}
+                />
+                {errors.City && touched.City && errors.City}
+                <label>Zip Code : </label>
+                <input
+                  type="zipcode"
+                  name="ZipCode"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.ZipCode}
+                />
+                {errors.ZipCode && touched.ZipCode && errors.ZipCode} <br></br>
+                <br></br>
                 <button className="btn" type="submit" disabled={isSubmitting}>
                   Submit
                 </button>

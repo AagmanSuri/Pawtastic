@@ -1,6 +1,6 @@
 import React from "react";
 import "./signup.css";
-import BackGroundCat from "../../assets/backGroungCat.svg";
+import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import { Formik } from "formik";
@@ -9,7 +9,7 @@ const Register = () => {
   const history = useHistory();
   return (
     <div className="wrapper wrapper-sign">
-      <img className="back-pic" src={BackGroundCat} alt="back"></img>
+      <img className="back-pic" src={BackGroundCat1} alt="back"></img>
       <div style={{ textAlign: "center", marginTop: "5rem" }}>
         <div
           style={{ marginTop: "-2rem", marginLeft: "-15rem" }}
