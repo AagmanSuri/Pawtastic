@@ -5,7 +5,8 @@ import Reviews from "./pages/Reviews/Reviews";
 import Services from "./pages/Services/index";
 import Signup from "./pages/Signup/index";
 import SignupRegister from "./pages/Signup/register";
-import registerHumanProfile from "./pages/Signup/registerHumanProfile"
+import registerHumanProfile from "./pages/Signup/registerHumanProfile";
+import registerPetBasic from "./pages/Signup/registerPetBasic";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
             <Route
               path="/Signup/registerHumanProfile"
               component={registerHumanProfile}
+            />
+            <Route
+              path="/Signup/registerPetBasic"
+              component={registerPetBasic}
             />
           </Switch>
         </div>

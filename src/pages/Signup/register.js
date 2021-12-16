@@ -50,7 +50,7 @@ const Register = () => {
             account.
           </h1>
           <Formik
-            initialValues={{ email: "", password: "" }}
+            initialValues={{}}
             validate={(values) => {
               const errors = {};
               if (!values.email) {

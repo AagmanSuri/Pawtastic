@@ -1,19 +1,17 @@
 import React from "react";
-
 import "./signup.css";
-
 import BackGroundCat from "../../assets/backgroundCat3.svg";
-
 import { Link } from "react-router-dom";
-
 import Logo from "../../assets/Logo.svg";
+import DogOption from "../../assets/DogOption.svg";
+import CatOption from "../../assets/CatOption.svg";
+import ParrotOption from "../../assets/ParrotOption.svg";
+import rabbitOption from "../../assets/rabbitOption.svg";
+import { Formik, Field } from "formik";
+// import { useHistory } from "react-router";
 
-import { Formik } from "formik";
-
-import { useHistory } from "react-router";
-
-const RegisterHumanProfile = () => {
-  const history = useHistory();
+const RegisterPetBasic = () => {
+  // const history = useHistory();
 
   return (
     <div className="wrapper wrapper-sign">
@@ -59,10 +57,11 @@ const RegisterHumanProfile = () => {
           }}
         >
           <h1>
-            Good news! We care for pets in Winter Park. Let’s create your
-            account.
+            Nice to meet you, Meagan. Tell us all about your furry, feathery, or
+            scaley friend.
           </h1>
 
+          {/* formik */}
           <Formik
             initialValues={{}}
             // validate={(values) => {
@@ -81,11 +80,9 @@ const RegisterHumanProfile = () => {
             onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
                 alert(JSON.stringify(values, null, 2));
-
                 setSubmitting(false);
               }, 400);
-
-              history.push("./registerPetBasic");
+              //   history.push("./registerPetBasic");
             }}
           >
             {({
@@ -106,66 +103,25 @@ const RegisterHumanProfile = () => {
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit}>
-                <label>First Name : </label>
-                <input
-                  type="text"
-                  name="FirstName"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.FirstName}
-                />
-                {errors.FirstName && touched.FirstName && errors.FirstName}{" "}
-                <label>LastName : </label>
-                <input
-                  type="text"
-                  name="LastName"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.LastName}
-                />
-                {errors.LastName && touched.LastName && errors.LastName}{" "}
-                <br></br>
-                <br></br>
-                <label>Phone : </label>
-                <input
-                  type="phone"
-                  name="Phone"
-                  required
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.Phone}
-                />
-                {errors.Phone && touched.Phone && errors.Phone}
-                {"                        "}
-                <label>PhoneAlt : </label>
-                <input
-                  type="phone"
-                  name="PhoneAlt"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.PhoneAlt}
-                />
-                {errors.PhoneAlt && touched.PhoneAlt && errors.PhoneAlt}{" "}
-                <br></br>
-                <br></br>
-                <label>City : </label>
-                <input
-                  type="text"
-                  name="City"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.City}
-                />
-                {errors.City && touched.City && errors.City}
-                <label>Zip Code : </label>
-                <input
-                  type="zipcode"
-                  name="ZipCode"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.ZipCode}
-                />
-                {errors.ZipCode && touched.ZipCode && errors.ZipCode} <br></br>
+                <div role="group" aria-labelledby="my-radio-group">
+                  <label>
+                    <Field type="radio" name="pet" value="Dog" />
+                    <img src={DogOption} alt="Dog"></img>
+                  </label>
+                  <label>
+                    <Field type="radio" name="pet" value="Cat" />
+                    <img src={CatOption} alt="Cat"></img>
+                  </label>
+                  <label>
+                    <Field type="radio" name="pet" value="Parrot" />
+                    <img src={ParrotOption} alt="Parrot"></img>
+                  </label>
+                  <label>
+                    <Field type="radio" name="pet" value="Rabbit" />
+                    <img src={rabbitOption} alt="Rabbit"></img>
+                  </label>
+                  {/* <div>Picked: {values.pet}</div> */}
+                </div>
                 <br></br>
                 <button className="btn" type="submit" disabled={isSubmitting}>
                   Submit
@@ -173,10 +129,14 @@ const RegisterHumanProfile = () => {
               </form>
             )}
           </Formik>
+          <p>
+            Have multiple pets? That’s awesome. You can create additional pet
+            profiles for the whole family later.
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default RegisterHumanProfile;
+export default RegisterPetBasic;
