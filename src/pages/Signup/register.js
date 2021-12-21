@@ -5,8 +5,13 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import { Formik } from "formik";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+import { createUserProfile } from "../../store/reducers/userProfileSlice";
+
 const Register = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
+
   return (
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat1} alt="back"></img>
@@ -67,6 +72,8 @@ const Register = () => {
               //   alert(JSON.stringify(values, null, 2));
               //   setSubmitting(false);
               // }, 400);
+              //dispatch(createUserProfile(JSON.stringify(values)));
+              dispatch(createUserProfile({ ...values }));
               history.push("./registerHumanProfile");
             }}
           >
