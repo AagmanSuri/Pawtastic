@@ -86,19 +86,12 @@ const RegisterHumanProfile = () => {
           >
             {({
               values,
-
               errors,
-
               touched,
-
               handleChange,
-
               handleBlur,
-
               handleSubmit,
-
               isSubmitting
-
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit}>

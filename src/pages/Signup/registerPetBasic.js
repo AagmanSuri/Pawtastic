@@ -8,11 +8,13 @@ import CatOption from "../../assets/CatOption.svg";
 import ParrotOption from "../../assets/ParrotOption.svg";
 import rabbitOption from "../../assets/rabbitOption.svg";
 import { Formik, Field } from "formik";
+import { useDispatch } from "react-redux";
+import { createUserProfile } from "../../store/reducers/userProfileSlice";
 // import { useHistory } from "react-router";
 
 const RegisterPetBasic = () => {
   // const history = useHistory();
-
+  const dispatch = useDispatch();
   return (
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat} alt="back"></img>
@@ -78,28 +80,22 @@ const RegisterPetBasic = () => {
             //   return errors;
             // }}
             onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }, 400);
+              // setTimeout(() => {
+              //   alert(JSON.stringify(values, null, 2));
+              //   setSubmitting(false);
+              // }, 400);
+              dispatch(createUserProfile({ ...values }));
               //   history.push("./registerPetBasic");
             }}
           >
             {({
               values,
-
               errors,
-
               touched,
-
               handleChange,
-
               handleBlur,
-
               handleSubmit,
-
               isSubmitting
-
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit}>
@@ -129,10 +125,6 @@ const RegisterPetBasic = () => {
               </form>
             )}
           </Formik>
-          <p>
-            Have multiple pets? That’s awesome. You can create additional pet
-            profiles for the whole family later.
-          </p>
         </div>
       </div>
     </div>
