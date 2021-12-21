@@ -37,8 +37,8 @@ const Signup = () => {
             </h2>
           </Link>
         </div>
-        <h1>Why our service?</h1>
-        <p style={{ fontSize: "20px", marginRight: "2rem" }}>
+        <h1 style={{ color: "white" }}>Why our service?</h1>
+        <p style={{ color: "white", fontSize: "20px", marginRight: "2rem" }}>
           <br></br>
           We’re animal lovers backed by insurance and experience<br></br>{" "}
           Powered by tech, so you can book and pay from our app <br></br>{" "}
