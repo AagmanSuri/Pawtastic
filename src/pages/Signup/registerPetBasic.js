@@ -16,7 +16,7 @@ const RegisterPetBasic = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { userProfile } = useSelector((state) => state.userProfile);
-  console.log(userProfile);
+  // console.log(userProfile);
   return (
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat} alt="back"></img>

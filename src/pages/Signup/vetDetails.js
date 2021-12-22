@@ -3,12 +3,12 @@ import "./signup.css";
 import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
-// import { useHistory } from "react-router";
+import { useHistory } from "react-router";
 import { useDispatch } from "react-redux";
 import { createUserProfile } from "../../store/reducers/userProfileSlice";
 import { Formik } from "formik";
 const VetDetails = () => {
-  //   const history = useHistory();
+  const history = useHistory();
   const dispatch = useDispatch();
 
   return (
@@ -67,12 +67,12 @@ const VetDetails = () => {
               // return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }, 400);
+              // setTimeout(() => {
+              //   alert(JSON.stringify(values, null, 2));
+              //   setSubmitting(false);
+              // }, 400);
               dispatch(createUserProfile({ ...values }));
-              //history.push("./");
+              history.push("./userDetails");
             }}
           >
             {({
