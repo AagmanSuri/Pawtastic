@@ -3,12 +3,12 @@ import "./signup.css";
 import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
-import { useHistory } from "react-router";
+//import { useHistory } from "react-router";
 import { useSelector } from "react-redux";
 // import { createUserProfile } from "../../store/reducers/userProfileSlice";
 // import { Formik } from "formik";
 const UserProfile = () => {
-  const history = useHistory();
+  // const history = useHistory();
   //   const dispatch = useDispatch();
 
   const { userProfile } = useSelector((state) => state.userProfile);
