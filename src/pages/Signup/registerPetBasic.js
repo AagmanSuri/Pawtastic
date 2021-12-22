@@ -8,13 +8,15 @@ import CatOption from "../../assets/CatOption.svg";
 import ParrotOption from "../../assets/ParrotOption.svg";
 import rabbitOption from "../../assets/rabbitOption.svg";
 import { Formik, Field } from "formik";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { createUserProfile } from "../../store/reducers/userProfileSlice";
 import { useHistory } from "react-router";
 
 const RegisterPetBasic = () => {
   const history = useHistory();
   const dispatch = useDispatch();
+  const { userProfile } = useSelector((state) => state.userProfile);
+  console.log(userProfile);
   return (
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat} alt="back"></img>
@@ -59,8 +61,8 @@ const RegisterPetBasic = () => {
           }}
         >
           <h1>
-            Nice to meet you, Meagan. Tell us all about your furry, feathery, or
-            scaley friend.
+            Nice to meet you, {userProfile.FirstName}. Tell us all about your
+            furry, feathery, or scaley friend.
           </h1>
 
           {/* formik */}
