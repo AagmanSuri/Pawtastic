@@ -3,12 +3,12 @@ import "./signup.css";
 import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 import { useDispatch } from "react-redux";
 import { createUserProfile } from "../../store/reducers/userProfileSlice";
-import { Formik, Field } from "formik";
-const PetDetails = () => {
-  const history = useHistory();
+import { Formik } from "formik";
+const VetDetails = () => {
+  //   const history = useHistory();
   const dispatch = useDispatch();
 
   return (
@@ -72,7 +72,7 @@ const PetDetails = () => {
                 setSubmitting(false);
               }, 400);
               dispatch(createUserProfile({ ...values }));
-              history.push("./vetDetails");
+              //history.push("./");
             }}
           >
             {({
@@ -86,75 +86,43 @@ const PetDetails = () => {
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit}>
-                <label>Name : </label>
+                <label>Veterinarian’s Name : </label>
                 <input
-                  placeholder="Enter dogs name"
+                  placeholder="Enter Vets name"
                   type="name"
-                  name="name"
+                  name="vetname"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.name}
+                  value={values.vetname}
                 />
-                {errors.name && touched.name && errors.name}
+                {errors.vetname && touched.vetname && errors.vetname}
                 {"  "}
-                <label>Breed : </label>
-                <input
-                  type="text"
-                  name="breed"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.breed}
-                />
-                {errors.breed && touched.breed && errors.breed}
-                {"     "}
-                <label>Birth Day : </label>
-                <input
-                  type="date"
-                  name="birthDay"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.birthDay}
-                />
-                {errors.birthDay && touched.birthDay && errors.birthDay}
-                {"     "}
-
-                <div role="group" aria-labelledby="my-radio-group">
-                  <label>Gender : </label>
-                  <label>
-                    <Field type="radio" name="Gender" value="Male" />
-                    <text>Male</text>
-                  </label>
-                  <label>
-                    <Field type="radio" name="Gender" value="Female" />
-                    <text>Female</text>
-                  </label>
-                  {/* <div>Picked: {values.Gender}</div> */}
-                </div>
-                {"     "}
-
-                <div role="group" aria-labelledby="my-radio-group">
-                  <label>Spayed or Neutered : </label>
-                  <label>
-                    <Field type="radio" name="neutered" value="yes" />
-                    <text>Yes</text>
-                  </label>
-                  <label>
-                    <Field type="radio" name="neutered" value="no" />
-                    <text>No</text>
-                  </label>
-                  {/* <div>Picked: {values.neutered}</div> */}
-                </div>
-                {"      "}
-                <label>Weight(in kgs) : </label>
+                <label>Veterinarian’s phone number : </label>
                 <input
                   type="number"
-                  name="weight"
+                  name="vetsPhoneNo"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.weight}
+                  value={values.vetsPhoneNo}
                 />
-                {errors.weight && touched.weight && errors.weight}
+                {errors.vetsPhoneNo &&
+                  touched.vetsPhoneNo &&
+                  errors.vetsPhoneNo}
                 {"     "}
+                <br></br>
+                <label>Veterinarian’s Addres : </label>
+                <input
+                  type="text-area"
+                  name="vetsAddress"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.vetsAddress}
+                />
+                {errors.vetsAddress &&
+                  touched.vetsAddress &&
+                  errors.vetsAddress}
+                {"     "}
+
                 <button className="btn" type="submit" disabled={isSubmitting}>
                   Submit
                 </button>
@@ -167,4 +135,4 @@ const PetDetails = () => {
   );
 };
 
-export default PetDetails;
+export default VetDetails;

@@ -9,6 +9,7 @@ import registerHumanProfile from "./pages/Signup/registerHumanProfile";
 import registerPetBasic from "./pages/Signup/registerPetBasic";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PetDetails from "./pages/Signup/petDetails";
+import VetDetails from "./pages/Signup/vetDetails";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
               component={registerPetBasic}
             />
             <Route path="/Signup/petDetails" component={PetDetails} />
+            <Route path="/Signup/vetDetails" component={VetDetails} />
           </Switch>
         </div>
       </Router>
