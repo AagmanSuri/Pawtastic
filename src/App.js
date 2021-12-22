@@ -8,6 +8,7 @@ import SignupRegister from "./pages/Signup/register";
 import registerHumanProfile from "./pages/Signup/registerHumanProfile";
 import registerPetBasic from "./pages/Signup/registerPetBasic";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PetDetails from "./pages/Signup/petDetails";
 function App() {
   return (
     <>
@@ -31,6 +32,7 @@ function App() {
               path="/Signup/registerPetBasic"
               component={registerPetBasic}
             />
+            <Route path="/Signup/petDetails" component={PetDetails} />
           </Switch>
         </div>
       </Router>

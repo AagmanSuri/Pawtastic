@@ -10,10 +10,10 @@ import rabbitOption from "../../assets/rabbitOption.svg";
 import { Formik, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { createUserProfile } from "../../store/reducers/userProfileSlice";
-// import { useHistory } from "react-router";
+import { useHistory } from "react-router";
 
 const RegisterPetBasic = () => {
-  // const history = useHistory();
+  const history = useHistory();
   const dispatch = useDispatch();
   return (
     <div className="wrapper wrapper-sign">
@@ -85,7 +85,7 @@ const RegisterPetBasic = () => {
               //   setSubmitting(false);
               // }, 400);
               dispatch(createUserProfile({ ...values }));
-              //   history.push("./registerPetBasic");
+              history.push("./petDetails");
             }}
           >
             {({
