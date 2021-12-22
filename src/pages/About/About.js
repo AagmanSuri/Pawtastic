@@ -24,7 +24,16 @@ const About = () => {
           <h1 style={{ fontSize: "40px", color: "white" }}>About US</h1>
           <div className="underline"></div>
         </div>
-        <p style={{ fontSize: "20px", color: "white" }}>
+        <p
+          style={{
+            background: "white",
+            height: "200px",
+            width: "600px",
+            padding: "2rem",
+            fontSize: "20px",
+            color: "black"
+          }}
+        >
           We care for your furry little loved ones while you’re away , We’ll
           take your pup for a 30 minute walk and make sure he or she has fresh
           food and water. We’ll stop by to snuggle, feed, and play with your
