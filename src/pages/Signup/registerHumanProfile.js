@@ -104,7 +104,7 @@ const RegisterHumanProfile = () => {
                   value={values.FirstName}
                 />
                 {errors.FirstName && touched.FirstName && errors.FirstName}{" "}
-                <label>LastName : </label>
+                <label style={{marginLeft:"2rem"}}>LastName : </label>
                 <input
                   type="text"
                   name="LastName"
@@ -117,6 +117,7 @@ const RegisterHumanProfile = () => {
                 <br></br>
                 <label>Phone : </label>
                 <input
+                style={{marginLeft:"2rem"}}
                   type="phone"
                   name="Phone"
                   required
@@ -126,8 +127,9 @@ const RegisterHumanProfile = () => {
                 />
                 {errors.Phone && touched.Phone && errors.Phone}
                 {"                        "}
-                <label>PhoneAlt : </label>
+                <label style={{marginLeft:"2rem"}}>PhoneAlt : </label>
                 <input
+                  style={{marginLeft:"0.3rem"}}
                   type="phone"
                   name="PhoneAlt"
                   onChange={handleChange}
@@ -139,6 +141,7 @@ const RegisterHumanProfile = () => {
                 <br></br>
                 <label>City : </label>
                 <input
+                  style={{marginLeft:"3.1rem"}}
                   type="text"
                   name="City"
                   onChange={handleChange}
@@ -146,8 +149,9 @@ const RegisterHumanProfile = () => {
                   value={values.City}
                 />
                 {errors.City && touched.City && errors.City}
-                <label>Zip Code : </label>
+                <label style={{marginLeft:"2.2rem"}}>Zip Code : </label>
                 <input
+                  style={{marginLeft:"0.45rem"}}
                   type="zipcode"
                   name="ZipCode"
                   onChange={handleChange}
@@ -156,7 +160,7 @@ const RegisterHumanProfile = () => {
                 />
                 {errors.ZipCode && touched.ZipCode && errors.ZipCode} <br></br>
                 <br></br>
-                <button className="btn" type="submit" disabled={isSubmitting}>
+                <button style={{marginTop:"1.5rem"}} className="btn" type="submit" disabled={isSubmitting}>
                   Submit
                 </button>
               </form>
