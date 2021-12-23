@@ -96,7 +96,8 @@ const PetDetails = () => {
                   value={values.name}
                 />
                 {errors.name && touched.name && errors.name}
-                {"  "}
+                {" "}
+                <br></br><br></br>
                 <label>Breed : </label>
                 <input
                   type="text"
@@ -106,7 +107,8 @@ const PetDetails = () => {
                   value={values.breed}
                 />
                 {errors.breed && touched.breed && errors.breed}
-                {"     "}
+                {" "}
+                <br></br><br></br>
                 <label>Birth Day : </label>
                 <input
                   type="date"
@@ -116,8 +118,8 @@ const PetDetails = () => {
                   value={values.birthDay}
                 />
                 {errors.birthDay && touched.birthDay && errors.birthDay}
-                {"     "}
-
+                {" "}
+                <br></br><br></br>
                 <div role="group" aria-labelledby="my-radio-group">
                   <label>Gender : </label>
                   <label>
@@ -131,7 +133,7 @@ const PetDetails = () => {
                   {/* <div>Picked: {values.Gender}</div> */}
                 </div>
                 {"     "}
-
+                <br></br>
                 <div role="group" aria-labelledby="my-radio-group">
                   <label>Spayed or Neutered : </label>
                   <label>
@@ -145,6 +147,7 @@ const PetDetails = () => {
                   {/* <div>Picked: {values.neutered}</div> */}
                 </div>
                 {"      "}
+                <br></br>
                 <label>Weight(in kgs) : </label>
                 <input
                   type="number"
@@ -155,6 +158,7 @@ const PetDetails = () => {
                 />
                 {errors.weight && touched.weight && errors.weight}
                 {"     "}
+                <br></br><br></br><br></br>
                 <button className="btn" type="submit" disabled={isSubmitting}>
                   Submit
                 </button>
