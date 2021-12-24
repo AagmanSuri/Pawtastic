@@ -12,7 +12,34 @@ const UserProfile = () => {
   //   const dispatch = useDispatch();
 
   const { userProfile } = useSelector((state) => state.userProfile);
-
+  const createProfileHandeler = () => {
+    console.log("working");
+    localStorage.setItem("userProfile", JSON.stringify(userProfile));
+    console.log(localStorage.getItem("userProfile"));
+    fetch("http://localhost:3001/register", {
+      method: "post",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        email: userProfile.email,
+        password: userProfile.password,
+        FirstName: userProfile.FirstName,
+        LastName: userProfile.LastName,
+        Phone: userProfile.Phone,
+        City: userProfile.City,
+        ZipCode: userProfile.ZipCode,
+        pet: userProfile.pet,
+        name: userProfile.name,
+        breed: userProfile.breed,
+        birthDay: userProfile.birthDay,
+        Gender: userProfile.Gender,
+        neutered: userProfile.neutered,
+        weight: userProfile.weight,
+        vetname: userProfile.vetname,
+        vetsPhoneNo: userProfile.vetsPhoneNo,
+        vetsAddress: userProfile.vetsAddress
+      })
+    });
+  };
   return (
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat1} alt="back"></img>
@@ -82,8 +109,9 @@ const UserProfile = () => {
             <Link to="../">
               <button
                 className="btn"
+                onClick={createProfileHandeler}
                 style={{ background: "#545871", color: "white" }}
-                // type="submit"
+                type="submit"
               >
                 Create Profile
               </button>

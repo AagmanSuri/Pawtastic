@@ -2,8 +2,13 @@ import React from "react";
 import "./Header.css";
 import Logo from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
+// import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+//import { authSlice } from "../../store/reducers/authSlice";
 
 const Header = () => {
+  const { auth } = useSelector((state) => state.auth);
+  console.log(auth);
   return (
     <div>
       <div className="Logo">
@@ -30,9 +35,21 @@ const Header = () => {
           <li>Services</li>
         </Link>
 
-        <Link className="NavLinks" to="/Signup">
-          <li>Signup</li>
-        </Link>
+        {auth && (
+          <Link className="NavLinks" to="/Profile">
+            <li>Profile</li>
+          </Link>
+        )}
+        {!auth && (
+          <Link className="NavLinks" to="/Signup">
+            <li>Signup</li>
+          </Link>
+        )}
+        {!auth && (
+          <Link className="NavLinks" to="/Login">
+            <li>Login</li>
+          </Link>
+        )}
       </ul>
     </div>
   );

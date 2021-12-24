@@ -1,5 +1,6 @@
 import Home from "./pages/Home/Home";
 // import Header from "./components/Header/Header";
+import { useEffect } from "react";
 import About from "./pages/About/About";
 import Reviews from "./pages/Reviews/Reviews";
 import Services from "./pages/Services/index";
@@ -11,7 +12,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PetDetails from "./pages/Signup/petDetails";
 import VetDetails from "./pages/Signup/vetDetails";
 import userDetails from "./pages/Signup/userProfile";
+import Login from "./pages/Login";
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:3001")
+      .then((response) => response.json())
+      .then(console.log)
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
   return (
     <>
       <Router>
@@ -22,6 +32,7 @@ function App() {
             {/* exact has been intoduced */}
             <Route path="/" exact component={Home} />
             <Route path="/About" component={About} />
+            <Route path="/Login" component={Login} />
             <Route path="/Reviews" component={Reviews} />
             <Route path="/Services" component={Services} />
             <Route exact path="/Signup" component={Signup} />
