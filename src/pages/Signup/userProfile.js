@@ -106,7 +106,7 @@ const UserProfile = () => {
             <text>{userProfile.weight} Kgs</text>
             <br></br>
             <br></br>
-            <Link to="../">
+            <Link to="./Login">
               <button
                 className="btn"
                 onClick={createProfileHandeler}
