@@ -95,10 +95,14 @@ const Login = () => {
                 })
               })
                 .then((response) => response.json())
-                .then((data) => alert(data));
-
-              dispatch(authCheck(true));
-              history.push("./");
+                .then((data) => {
+                  if (data === "success") {
+                    dispatch(authCheck(true));
+                    history.push("./");
+                  } else {
+                    alert(data);
+                  }
+                });
             }}
           >
             {({
