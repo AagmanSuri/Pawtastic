@@ -13,6 +13,7 @@ import PetDetails from "./pages/Signup/petDetails";
 import VetDetails from "./pages/Signup/vetDetails";
 import userDetails from "./pages/Signup/userProfile";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard/index";
 function App() {
   useEffect(() => {
     fetch("http://localhost:3001")
@@ -48,6 +49,7 @@ function App() {
             <Route path="/Signup/petDetails" component={PetDetails} />
             <Route path="/Signup/vetDetails" component={VetDetails} />
             <Route path="/Signup/userDetails" component={userDetails} />
+            <Route path="/Dashboard" component={Dashboard}></Route>
           </Switch>
         </div>
       </Router>

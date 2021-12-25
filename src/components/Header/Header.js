@@ -35,6 +35,10 @@ const Header = () => {
           <li>Services</li>
         </Link>
 
+        <Link className="NavLinks" to="/Dashboard">
+          <li>Dashboard</li>
+        </Link>
+
         {auth && (
           <Link className="NavLinks" to="/Profile">
             <li>Profile</li>
