@@ -2,8 +2,8 @@ import React from "react";
 import DatePicker from "react-datepicker"
 import { useFormik, Formik, Field, Form } from 'formik';
 import "react-datepicker/dist/react-datepicker.css";
-import { PageWrapper } from "../Signup/styles";
-import { Width } from "../Signup/styles";
+import { PageWrapper } from "../Services/styles";
+import { Width } from "../Services/styles";
 
 const Stay = () => {
 
@@ -12,7 +12,7 @@ const Stay = () => {
         
         <Formik initialValues={{notes: '',}}>
             {({ values, setFieldValue })  => (
-                <Form onSubmit={}>
+                <Form onSubmit={() => {}}>
                <h1> Stay the Night</h1>
                <br></br>
                <h3>Choose your Frequency</h3>
