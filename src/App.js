@@ -11,6 +11,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PetDetails from "./pages/Signup/petDetails";
 import VetDetails from "./pages/Signup/vetDetails";
 import userDetails from "./pages/Signup/userProfile";
+import Visit from "./pages/Visit/visit";
+import Walk from "./pages/Walk/walk";
+import Stay from "./pages/Stay/stay";
+
 function App() {
   return (
     <>
@@ -23,9 +27,14 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/About" component={About} />
             <Route path="/Reviews" component={Reviews} />
-            <Route path="/Services" component={Services} />
+            <Route exact path="/Services" component={Services} />
             <Route exact path="/Signup" component={Signup} />
             <Route path="/Signup/register" component={SignupRegister} />
+            <Route path="/Services/Visit" component={Visit} />
+            <Route path="/Services/Walk" component={Walk} />
+            <Route path="/Services/Stay" component={Stay} />
+
+
             <Route
               path="/Signup/registerHumanProfile"
               component={registerHumanProfile}
