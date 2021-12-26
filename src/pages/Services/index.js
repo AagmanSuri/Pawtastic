@@ -4,17 +4,17 @@ import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 //import { Formik } from "formik";
-// import { useHistory } from "react-router";
-// import { useDispatch } from "react-redux";
-//import { createUserProfile } from "../../store/reducers/userProfileSlice";
+import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+import { createservice } from "../../store/reducers/serviceSlice";
 import ServicePriceCard from "../../components/ServicePriceCard/Price";
 import { useSelector } from "react-redux";
 // import { authCheck } from "../../store/reducers/authSlice";
 import Login from "../Login/index";
 
 const Services = () => {
-  // const history = useHistory();
-  // const dispatch = useDispatch();
+  const history = useHistory();
+  const dispatch = useDispatch();
   const { auth } = useSelector((state) => state.auth);
   if (!auth) {
     return <Login />;
@@ -65,21 +65,54 @@ const Services = () => {
           <h1>We can’t wait to see your pet! How can we help?</h1>
           <ServicePriceCard />
           <br></br>
-          <Link to="/Services/Booking">
-            <button style={{ marginLeft: "5rem" }} className="btn">
-              Dog Walk
-            </button>
-          </Link>
-          <Link to="/Services/Booking">
-            <button style={{ marginLeft: "13rem" }} className="btn">
-              Drop-in Visit
-            </button>
-          </Link>
-          <Link to="/Services/Booking">
-            <button style={{ marginLeft: "11rem" }} className="btn">
-              House Sitting
-            </button>
-          </Link>
+
+          <button
+            onClick={() => {
+              dispatch(
+                createservice({
+                  message: "Dog Walk",
+                  razorPayLink: "https://rzp.io/l/pm7TweedaE"
+                })
+              );
+              history.push("/Services/Booking");
+            }}
+            style={{ marginLeft: "5rem" }}
+            className="btn"
+          >
+            Dog Walk
+          </button>
+
+          <button
+            onClick={() => {
+              dispatch(
+                createservice({
+                  message: "Drop-in Visit",
+                  razorPayLink: "https://rzp.io/l/oj0V0f7bmi"
+                })
+              );
+              history.push("/Services/Booking");
+            }}
+            style={{ marginLeft: "13rem" }}
+            className="btn"
+          >
+            Drop-in Visit
+          </button>
+
+          <button
+            onClick={() => {
+              dispatch(
+                createservice({
+                  message: "House Sitting",
+                  razorPayLink: "https://rzp.io/l/Y2Bv27XyR"
+                })
+              );
+              history.push("/Services/Booking");
+            }}
+            style={{ marginLeft: "11rem" }}
+            className="btn"
+          >
+            House Sitting
+          </button>
         </div>
       </div>
     </div>

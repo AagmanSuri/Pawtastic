@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import { Formik, Field } from "formik";
 // import { useHistory } from "react-router";
-// import { useDispatch } from "react-redux";
-
+import { useSelector, useDispatch } from "react-redux";
+import { createservice } from "../../store/reducers/serviceSlice";
 // import Select from "react-select";
 import { PageWrapper } from "./styles";
 const Booking = () => {
   //   const history = useHistory();
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const { service } = useSelector((state) => state.service);
 
   return (
     <div className="wrapper wrapper-sign">
@@ -73,8 +74,9 @@ const Booking = () => {
                 alert(JSON.stringify(values, null, 2));
                 setSubmitting(false);
               }, 400);
-              //dispatch(createUserProfile(JSON.stringify(values)));
+
               //dispatch(createUserProfile({ ...values }));
+              dispatch(createservice({ ...values }));
               //history.push("./BookingHumanProfile");
             }}
           >
@@ -182,15 +184,15 @@ const Booking = () => {
                 {"     "}
                 <br></br>
                 <br></br>
-                <a
+                {/* <a
                   style={{ textDecoration: "none" }}
                   className="btn"
                   href="https://rzp.io/l/pm7TweedaE"
-                >
-                  {/* <button className="btn" type="submit"> */}
+                > */}
+                <button className="btn" type="submit">
                   Next
-                  {/* </button> */}
-                </a>
+                </button>
+                {/* </a> */}
               </form>
             )}
           </Formik>
