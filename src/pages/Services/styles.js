@@ -18,12 +18,12 @@ export const PageWrapper = styled.section`
   }
 
   font-size: 1rem;
-  line-height: 1.5rem;
-  max-width: 35em;
+  line-height: 2rem;
+  max-width: 40em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5rem;
-  padding: 1rem 0.75rem;
+  padding: 1rem 2rem 1rem 1rem;
   border: 1px solid lightgrey;
   border-radius: 4px;
 `;
@@ -31,6 +31,6 @@ export const PageWrapper = styled.section`
 export const Width = styled.section`
   &,
   & * {
-    text-box: 500 px;
+    text-box: 500px;
   }
 `;

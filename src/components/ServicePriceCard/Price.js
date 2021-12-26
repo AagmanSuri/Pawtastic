@@ -43,7 +43,7 @@ const Price = () => {
                 paddingBottom: "2rem"
               }}
             >
-              <h1>$15</h1> <small>PER 30 MIN WALK</small>
+              <h1>₹250</h1> <small>PER 30 MIN WALK</small>
               <br></br>
             </div>
           </CardContent>
@@ -82,7 +82,7 @@ const Price = () => {
                 paddingBottom: "2rem"
               }}
             >
-              <h1>$15</h1> <small>PER 30 MIN WALK</small>
+              <h1>₹350</h1> <small>PER 30 MIN WALK</small>
               <br></br>
             </div>
           </CardContent>
@@ -121,7 +121,7 @@ const Price = () => {
                 paddingBottom: "2rem"
               }}
             >
-              <h1>$45</h1> <small>PER NIGHT</small>
+              <h1>₹1000</h1> <small>PER NIGHT</small>
               <br></br>
             </div>
           </CardContent>

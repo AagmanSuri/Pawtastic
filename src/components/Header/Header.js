@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 // import { useSelector, useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 //import { authSlice } from "../../store/reducers/authSlice";
+import { useDispatch } from "react-redux";
+import { authCheck } from "../../store/reducers/authSlice";
 
 const Header = () => {
   const { auth } = useSelector((state) => state.auth);
   console.log(auth);
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="Logo">
@@ -31,19 +34,23 @@ const Header = () => {
           <li>Reviews</li>
         </Link>
 
-        <Link className="NavLinks" to="/Services">
-          <li>Services</li>
-        </Link>
-
-        <Link className="NavLinks" to="/Dashboard">
-          <li>Dashboard</li>
-        </Link>
+        {auth && (
+          <Link className="NavLinks" to="/Services">
+            <li>Services</li>
+          </Link>
+        )}
 
         {auth && (
+          <Link className="NavLinks" to="/Dashboard">
+            <li>Dashboard</li>
+          </Link>
+        )}
+
+        {/* {auth && (
           <Link className="NavLinks" to="/Profile">
             <li>Profile</li>
           </Link>
-        )}
+        )} */}
         {!auth && (
           <Link className="NavLinks" to="/Signup">
             <li>Signup</li>
@@ -53,6 +60,17 @@ const Header = () => {
           <Link className="NavLinks" to="/Login">
             <li>Login</li>
           </Link>
+        )}
+        {auth && (
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              dispatch(authCheck(false));
+            }}
+            className="NavLinks"
+          >
+            Logout
+          </li>
         )}
       </ul>
     </div>

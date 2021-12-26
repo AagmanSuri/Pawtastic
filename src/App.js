@@ -12,13 +12,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PetDetails from "./pages/Signup/petDetails";
 import VetDetails from "./pages/Signup/vetDetails";
 import userDetails from "./pages/Signup/userProfile";
-
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard/index";
+import Booking from "./pages/Services/Booking";
 
-import Visit from "./pages/Visit/visit";
-import Walk from "./pages/Walk/walk";
-import Stay from "./pages/Stay/stay";
+// import Visit from "./pages/Visit/visit";
+// import Walk from "./pages/Walk/walk";
+// import Stay from "./pages/Stay/stay";
 
 function App() {
   // useEffect(() => {
@@ -41,12 +41,13 @@ function App() {
             <Route path="/About" component={About} />
             <Route path="/Login" component={Login} />
             <Route path="/Reviews" component={Reviews} />
-            <Route exact path="/Services" component={Services} />
+
             <Route exact path="/Signup" component={Signup} />
             <Route path="/Signup/register" component={SignupRegister} />
-            <Route path="/Services/Visit" component={Visit} />
+
+            {/* <Route path="/Services/Visit" component={Visit} />
             <Route path="/Services/Walk" component={Walk} />
-            <Route path="/Services/Stay" component={Stay} />
+            <Route path="/Services/Stay" component={Stay} /> */}
 
             <Route
               path="/Signup/registerHumanProfile"
@@ -60,6 +61,8 @@ function App() {
             <Route path="/Signup/vetDetails" component={VetDetails} />
             <Route path="/Signup/userDetails" component={userDetails} />
             <Route path="/Dashboard" component={Dashboard}></Route>
+            <Route exact path="/Services" component={Services} />
+            <Route path="/Services/Booking" component={Booking}></Route>
           </Switch>
         </div>
       </Router>
