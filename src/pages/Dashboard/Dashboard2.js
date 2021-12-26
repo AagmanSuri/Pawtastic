@@ -36,9 +36,7 @@ const Dashboard = () => {
                 Book a service
               </button>
               <footer>
-                <Link to="/Dashboard/Dashboard3">
               <p style={{color:"white"}}>My Account</p>
-              </Link>
                 <br></br>
                 <p style={{color:"white"}}>Support</p>
                 <br></br>
@@ -52,68 +50,42 @@ const Dashboard = () => {
                 <hr></hr>
                 <p style={{color:"9597A6"}}><b>Saturday</b> Febraury 20th</p>
                 <br></br>
-                <input type="radio" value="Dog walk"></input>
-                <label for="Dog walk">Dog walk</label>
-                <br></br>
-                <input type="radio" value="Morning"></input>
-                <label for="Morning">Morning</label>
+                <p style={{color:"#9597A6"}}>Dog walk</p>
+                <p style={{color:"#9597A6"}}>Morning</p>
                 <hr></hr>
                 <p style={{color:"9597A6"}}><b>Sunday</b> Febraury 21th</p>
                 <br></br>
-                <input type="radio" value="Dog walk"></input>
-                <label for="Dog walk">Dog walk</label>
-                <br></br>
-                <input type="radio" value="Morning"></input>
-                <label for="Morning">Morning</label>
+                <p style={{color:"#9597A6"}}>Dog walk</p>
+                <p style={{color:"#9597A6"}}>Morning</p>
                 <hr></hr>
                 <h3 style={{color:"#9597A6"}}>COMPLETED SERVICES</h3>
                 <p style={{color:"9597A6"}}><b>Friday</b> Febraury 19th</p>
                 <br></br>
-                <input type="radio" value="Dog walk"></input>
-                <label for="Dog walk">Dog walk</label>
-                <br></br>
-                <input type="radio" value="Morning"></input>
-                <label for="Morning">Morning</label>
+                <p style={{color:"#9597A6"}}>Dog walk</p>
+                <p style={{color:"#9597A6"}}>Morning</p>
                 <br></br>
                 <p style={{color:"9597A6"}}><b>Thursday</b> Febraury 18th</p> &nbsp; &nbsp;&nbsp;<image src="../assets../dog walk.svg"></image>
                 <br></br>
-                <input type="radio" value="Dog walk"></input>
-                <label for="Dog walk">Dog walk</label>
-                <br></br>
-                <input type="radio" value="Morning"></input>
-                <label for="Morning">Morning</label>
+                <p style={{color:"#9597A6"}}>Dog walk</p>
+                <p style={{color:"#9597A6"}}>Morning</p>
                 <br></br>
                 <p style={{color:"9597A6"}}><b>Wednesday</b> Febraury 17th</p>
                 <br></br>
-                <input type="radio" value="Dog walk"></input>
-                <label for="Dog walk">Dog walk</label>
-                <br></br>
-                <input type="radio" value="Morning"></input>
-                <label for="Morning">Morning</label>
+                <p style={{color:"#9597A6"}}>Dog walk</p>
+                <p style={{color:"#9597A6"}}>Morning</p>
+
 
               </div>
-              <div className="rightpannel">
-                <p style={{color:"#9597A6"}}>Thursday,February 18th
-               
-                </p>
-                <hr></hr>
-                <p>Please be sure to give her the<br></br> antibiotics,they are on the <br>
-                </br> on the kitchen counter..
+              <div className="leftpane">
+              <p style={{color:"9597A6"}}>Friday,Thursday, Friday 18th</p>
+              <hr></hr>
+              <p style={{color:"9597A6"}}> Service for</p>
+              <p style={{color:"9597A6"}}>Ginger Fisher</p>  &nbsp;  &nbsp; &nbsp; 
+              <button type="Edit">Edit</button>
+              <br></br>
+              
 
-                </p>
-                <br></br>
-                <button type="chat">chat</button>
-                <hr></hr>
-                <p style={{color:"#9597A6"}}>Arrival: <b>10:00 AM</b> Departure:<b>10:30 AM</b></p>
-                <br></br>
-                <p style={{color:"#9597A6"}}>2 Miles</p>
-                <br></br>
-                <p style={{color:"#9597A6"}}>30 mins</p>
-                <br></br>
-                <p style={{color:"#9597A6"}}>1 poop</p>
-                <br></br>
-                <p style={{color:"#9597A6"}}>2 pees</p>
-                
+
               </div>
 
             </div>
@@ -124,4 +96,4 @@ const Dashboard = () => {
         };
 
             
-        export default Dashboard;
+              
