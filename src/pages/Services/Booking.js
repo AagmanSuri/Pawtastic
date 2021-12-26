@@ -52,10 +52,8 @@ const Booking = () => {
             marginTop: "16rem"
           }}
         >
-          <h1>
-            Good news! We care for pets in Winter Park. Let’s create your
-            account.
-          </h1>
+          <h1>Service Type : {service.message}</h1>
+
           <Formik
             initialValues={{}}
             // validate={(values) => {
