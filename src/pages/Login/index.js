@@ -96,12 +96,13 @@ const Login = () => {
               })
                 .then((response) => response.json())
                 .then((data) => {
-                  if (data === "success") {
+                  if (data.message === "success") {
+                    console.log(data);
                     dispatch(authCheck(true));
                     history.push("./");
                   } else {
                     console.log(data);
-                    alert(data);
+                    alert(data.message);
                   }
                 });
             }}
@@ -137,7 +138,7 @@ const Login = () => {
                 />
                 {errors.password && touched.password && errors.password}
                 {"     "}
-                <button className="btn" type="submit" disabled={isSubmitting}>
+                <button className="btn" type="submit">
                   Submit
                 </button>
               </form>
