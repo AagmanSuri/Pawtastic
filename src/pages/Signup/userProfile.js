@@ -16,7 +16,7 @@ const UserProfile = () => {
     console.log("working");
     localStorage.setItem("userProfile", JSON.stringify(userProfile));
     console.log(localStorage.getItem("userProfile"));
-    fetch("http://localhost:3001/register", {
+    fetch("https://mernpawtastic.herokuapp.com/register", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

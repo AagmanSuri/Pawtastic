@@ -1,6 +1,6 @@
 import Home from "./pages/Home/Home";
 // import Header from "./components/Header/Header";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 import About from "./pages/About/About";
 import Reviews from "./pages/Reviews/Reviews";
 import Services from "./pages/Services/index";
@@ -15,14 +15,14 @@ import userDetails from "./pages/Signup/userProfile";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard/index";
 function App() {
-  useEffect(() => {
-    fetch("http://localhost:3001")
-      .then((response) => response.json())
-      .then(console.log)
-      .catch((e) => {
-        console.log(e);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:3001")
+  //     .then((response) => response.json())
+  //     .then(console.log)
+  //     .catch((e) => {
+  //       console.log(e);
+  //     });
+  // }, []);
   return (
     <>
       <Router>

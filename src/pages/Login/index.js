@@ -86,7 +86,7 @@ const Login = () => {
               //   alert("Wrong Email or password");
               // }
 
-              fetch("http://localhost:3001/signin", {
+              fetch("https://mernpawtastic.herokuapp.com/signin", {
                 method: "post",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({
@@ -100,6 +100,7 @@ const Login = () => {
                     dispatch(authCheck(true));
                     history.push("./");
                   } else {
+                    console.log(data);
                     alert(data);
                   }
                 });
