@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const PageWrapper = styled.section`
   &,
@@ -29,9 +29,8 @@ export const PageWrapper = styled.section`
 `;
 
 export const Width = styled.section`
-&,
-& * {
-  text-box: 500 px;
-}
-`
-;
+  &,
+  & * {
+    text-box: 500 px;
+  }
+`;
