@@ -15,7 +15,7 @@ import userDetails from "./pages/Signup/userProfile";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard/index";
 import Booking from "./pages/Services/Booking";
-
+import ConfirmDetails from "./pages/Services/ConfirmDetails";
 // import Visit from "./pages/Visit/visit";
 // import Walk from "./pages/Walk/walk";
 // import Stay from "./pages/Stay/stay";
@@ -63,6 +63,10 @@ function App() {
             <Route path="/Dashboard" component={Dashboard}></Route>
             <Route exact path="/Services" component={Services} />
             <Route path="/Services/Booking" component={Booking}></Route>
+            <Route
+              path="/Services/ConfirmDetails"
+              component={ConfirmDetails}
+            ></Route>
           </Switch>
         </div>
       </Router>
