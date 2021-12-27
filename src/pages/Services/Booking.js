@@ -1,5 +1,6 @@
 import React from "react";
 // import "./signup.css";
+
 import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
@@ -13,6 +14,7 @@ const Booking = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { service } = useSelector((state) => state.service);
+  const { userProfile } = useSelector((state) => state.userProfile);
   const createServiceHandeler = () => {
     console.log("working");
     // localStorage.setItem("userProfile", JSON.stringify(userProfile));
@@ -21,6 +23,7 @@ const Booking = () => {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
+        email: userProfile[0].email,
         messsage: service.messsage,
         razorPayLink: service.razorPayLink,
         frequency: service.frequency,

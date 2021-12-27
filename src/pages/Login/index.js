@@ -8,7 +8,7 @@ import { useHistory } from "react-router";
 // import { useSelector, useDispatch } from "react-redux";
 import { useDispatch } from "react-redux";
 import { authCheck } from "../../store/reducers/authSlice";
-
+import { createUserProfile } from "../../store/reducers/userProfileSlice";
 const Login = () => {
   const history = useHistory();
   const dispatch = useDispatch();
@@ -99,6 +99,7 @@ const Login = () => {
                   if (data.message === "success") {
                     console.log(data);
                     dispatch(authCheck(true));
+                    dispatch(createUserProfile({ ...data.data }));
                     history.push("./");
                   } else {
                     console.log(data);
