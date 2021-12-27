@@ -9,6 +9,7 @@ import Logo from "../../assets/Logo.svg";
 // import { createUserProfile } from "../../store/reducers/userProfileSlice";
 import Profile from "../Dashboard/Profile";
 import Service from "../Dashboard/Service";
+
 const Register = () => {
   //   const history = useHistory();
   //   const dispatch = useDispatch();
@@ -61,10 +62,10 @@ const Register = () => {
             marginTop: "7rem"
           }}
         >
-          {/* <h1>
+          <h1>
             Good news! We care for pets in Winter Park. Let’s create your
             account.
-          </h1> */}
+          </h1>
           <Profile />
           <Service />
         </div>

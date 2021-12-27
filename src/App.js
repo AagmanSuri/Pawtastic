@@ -60,7 +60,7 @@ function App() {
             <Route path="/Signup/petDetails" component={PetDetails} />
             <Route path="/Signup/vetDetails" component={VetDetails} />
             <Route path="/Signup/userDetails" component={userDetails} />
-            <Route path="/Dashboard" component={Dashboard}></Route>
+            <Route exact path="/Dashboard" component={Dashboard}></Route>
             <Route exact path="/Services" component={Services} />
             <Route path="/Services/Booking" component={Booking}></Route>
             <Route
