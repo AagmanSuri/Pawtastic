@@ -4,16 +4,33 @@ import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import { Formik, Field } from "formik";
-// import { useHistory } from "react-router";
+import { useHistory } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { createservice } from "../../store/reducers/serviceSlice";
 // import Select from "react-select";
 import { PageWrapper } from "./styles";
 const Booking = () => {
-  //   const history = useHistory();
+  const history = useHistory();
   const dispatch = useDispatch();
   const { service } = useSelector((state) => state.service);
-
+  const createServiceHandeler = () => {
+    console.log("working");
+    // localStorage.setItem("userProfile", JSON.stringify(userProfile));
+    //console.log(localStorage.getItem("userProfile"));
+    fetch("https://mernpawtastic.herokuapp.com/service", {
+      method: "post",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        messsage: service.messsage,
+        razorPayLink: service.razorPayLink,
+        frequency: service.frequency,
+        start_Date: service.start_Date,
+        days: service.days,
+        Times: service.Times,
+        note_for_sitter: service.note_for_sitter
+      })
+    });
+  };
   return (
     <div className="wrapper wrapper-sign">
       <img className="back-pic" src={BackGroundCat1} alt="back"></img>
@@ -68,14 +85,15 @@ const Booking = () => {
             //   return errors;
             // }}
             onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }, 400);
+              // setTimeout(() => {
+              //   alert(JSON.stringify(values, null, 2));
+              //   setSubmitting(false);
+              // }, 400);
 
               //dispatch(createUserProfile({ ...values }));
               dispatch(createservice({ ...values }));
-              //history.push("./BookingHumanProfile");
+              createServiceHandeler();
+              history.push("/Services/ConfirmDetails");
             }}
           >
             {({
