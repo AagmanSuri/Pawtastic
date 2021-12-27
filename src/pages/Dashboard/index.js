@@ -3,16 +3,19 @@ import React from "react";
 import BackGroundCat1 from "../../assets/backgroundCat1.svg";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
+// import { useState } from "react";
 // import { Formik } from "formik";
 // import { useHistory } from "react-router";
 // import { useDispatch } from "react-redux";
 // import { createUserProfile } from "../../store/reducers/userProfileSlice";
 import Profile from "../Dashboard/Profile";
-import Service from "../Dashboard/Service";
+// import Service from "../Dashboard/Service";
 
 const Register = () => {
-  //   const history = useHistory();
+  // const history = useHistory();
   //   const dispatch = useDispatch();
+
+  // const [isService, setisService] = useState(true);
 
   return (
     <div className="wrapper wrapper-sign">
@@ -40,15 +43,23 @@ const Register = () => {
           Updates and pics for every visit keep you in the loop
         </p> */}
         <br></br>
-        <button className="btn" style={{ marginLeft: "-4rem" }}>
+        {/* <button
+          onCLick={() => setisService(false)}
+          className="btn"
+          style={{ marginLeft: "-4rem" }}
+        >
           User Profile
-        </button>
+        </button> */}
         <br></br>
         <br></br>
         <br></br>
-        <button className="btn" style={{ marginLeft: "-4rem", width: "9rem" }}>
+        {/* <button
+          onCLick={() => setisService(false)}
+          className="btn"
+          style={{ marginLeft: "-4rem", width: "9rem" }}
+        >
           Services
-        </button>
+        </button> */}
       </div>
       <div
         className="box2"
@@ -62,12 +73,12 @@ const Register = () => {
             marginTop: "7rem"
           }}
         >
-          <h1>
+          {/* <h1>
             Good news! We care for pets in Winter Park. Let’s create your
             account.
-          </h1>
+          </h1> */}
           <Profile />
-          <Service />
+          {/* <Service /> */}
         </div>
       </div>
     </div>
