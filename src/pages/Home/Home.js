@@ -18,9 +18,9 @@ const Home = () => {
   return (
     <>
       <Header />
-      <section className="back">
-        <img src={DogBanner} alt="Logo"></img>
-      </section>
+      <div className="back">
+        <img className="DogImage" src={DogBanner} alt="Logo"></img>
+      </div>
       <section className="front">
         <div className="right center" style={{ color: "white" }}>
           <h1>we care for</h1>
