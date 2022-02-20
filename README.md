@@ -110,8 +110,4 @@ Request to be sent
 
 
 
-## Contributors
-1. Aagman Suri - 1911066
-2. Aditya Bhaleghare - 1911068
-3. Swastik Kar - 1911086
-4. Mitali Sharma - 1911094
+
